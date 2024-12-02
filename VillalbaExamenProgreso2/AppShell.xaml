@@ -10,7 +10,7 @@
     <TabBar>
         <Tab Title=" Recarga"
              Icon="recarga_icon.png">
-            <ShellContent ContentTemplate="{DataTemplate ViewState:PaginaRecarga}"></ShellContent>
+            <ShellContent ContentTemplate="{DataTemplate local:PaginaRecarga}"></ShellContent>
         </Tab>
     </TabBar>
 

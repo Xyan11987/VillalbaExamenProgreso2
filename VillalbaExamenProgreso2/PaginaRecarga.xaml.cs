@@ -26,7 +26,31 @@ public partial class PaginaRecarga : ContentPage
 				; return;
 		}
 
+		string fileName = $"{NombreUsuario} {NumeroTelefonico}.txt";
+		string filepath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), fileName);
+
+		string recargaInfo = $"Nombre: {NombreUsuario} \nTelefono: {NumeroTelefonico} \nRecarga Realizada: {DateTime.Now}";
+		File.WriteAllText(filepath, recargaInfo ) ;
+
+		DisplayAlert("Recarga Realizada", "La recarga se ha realizado exitosamente", "OK.");
+
+		MostrarUltimaRecarga();
     }
+
+	private void MostrarUltimaRecarga()
+	{
+		string fileName = $"{NombreUsuario} {NumeroTelefonico}.txt";
+		string filepath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), fileName);
+
+		if (File.Exists(filepath))
+		{ 
+			string ultimaRecarga = File.ReadAllText(filepath) ;
+
+			aa_label3.Text = ultimaRecarga;
+		}
+    }
+
+	
 
 
 
