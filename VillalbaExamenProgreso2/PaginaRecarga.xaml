@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VillalbaExamenProgreso2.PaginaRecarga"
+             Title="PaginaRecarga">
+    <StackLayout Padding="20" Spacing="15">
+        <Label 
+            x:Name="aa_label1"
+            Text="Realiza tu recarga"
+            FontSize="20"
+            HorizontalOptions="Center"
+            TextColor="White"/>
+        <Entry 
+            x:Name="aa_entry1"
+            Placeholder="Ingrese numero telefonico"
+            Keyboard="Telephone"
+            MaxLength="10"
+            Text="{Binding NumeroTelefonico}"/>
+
+        <Entry 
+            x:Name="aa_entry2"
+            Placeholder="Ingrese nombre de usuario"
+            Keyboard="Telephone"
+            Text="{Binding NombreDeUsuario}"/>
+
+        <Button
+            x:Name="aa_button1"
+            Text="Recargar"
+            Command="{Binding RecargarCommand}"
+            BackgroundColor="Purple"
+            TextColor="White"/>
+        
+        <Label 
+            x:Name="aa_label2"
+            Text="La ultima recarga fue:"
+            FontSize="14"
+            TextColor="Black"/>
+        
+        <Label
+            x:Name="aa_label3"
+            Text="{Binding UltimaRecaga}"
+            FontSize="14"
+            TextColor="Gray"/>
+    </StackLayout>
+</ContentPage>
