@@ -20,8 +20,14 @@ public partial class PaginaRecarga : ContentPage, INotifyPropertyChanged
 
 	
 	private void Recargar(object sender, EventArgs e)
+
 	{
-		if (string.IsNullOrEmpty(NumeroTelefonico) || string.IsNullOrEmpty(NombreUsuario))
+
+		NumeroTelefonico = aa_entry1.Text;
+        NombreUsuario = aa_entry2.Text;
+
+
+        if (string.IsNullOrEmpty(NumeroTelefonico) || string.IsNullOrEmpty(NombreUsuario))
 		{
 			DisplayAlert("Error", "Ingrese todos los datos.", "OK.")
 				; return;
