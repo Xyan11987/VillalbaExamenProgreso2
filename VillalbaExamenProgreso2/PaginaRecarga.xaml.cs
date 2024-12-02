@@ -1,10 +1,11 @@
 
 
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace VillalbaExamenProgreso2;
 
-public partial class PaginaRecarga : ContentPage
+public partial class PaginaRecarga : ContentPage, INotifyPropertyChanged
 {
 	public PaginaRecarga()
 	{

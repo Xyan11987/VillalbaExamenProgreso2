@@ -15,18 +15,18 @@
             Placeholder="Ingrese numero telefonico"
             Keyboard="Telephone"
             MaxLength="10"
-            Text="{Binding NumeroTelefonico}"/>
+            Text="{Binding NumeroTelefonico, Mode=TwoWay}"/>
 
         <Entry 
             x:Name="aa_entry2"
             Placeholder="Ingrese nombre de usuario"
             Keyboard="Telephone"
-            Text="{Binding NombreDeUsuario}"/>
+            Text="{Binding NombreDeUsuario, Mode=TwoWay}"/>
 
         <Button
             x:Name="aa_button1"
             Text="Recargar"
-            Command="{Binding RecargarCommand}"
+            Clicked="Recargar"
             BackgroundColor="Purple"
             TextColor="White"/>
         
@@ -38,7 +38,7 @@
         
         <Label
             x:Name="aa_label3"
-            Text="{Binding UltimaRecaga}"
+            Text="{Binding UltimaRecarga}"
             FontSize="14"
             TextColor="Gray"/>
     </StackLayout>
